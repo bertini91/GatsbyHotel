@@ -1,8 +1,16 @@
 import React from "react"
 import { css } from "@emotion/react"
+import styled from "@emotion/styled"
+import { Link } from "gatsby"
 import Navegacion from "./Navegacion"
 
-const Header = props => {
+const EnalceHome = styled(Link)`
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+`
+
+const Header = () => {
   return (
     <header
       css={css`
@@ -21,14 +29,9 @@ const Header = props => {
           }
         `}
       >
-        <h1
-          css={css`
-            color: #fff;
-            text-align: center;
-          `}
-        >
-          Hotel Gatsby
-        </h1>
+        <EnalceHome to="/">
+          <h1>Hotel Gatsby</h1>
+        </EnalceHome>
         <Navegacion></Navegacion>
       </div>
     </header>
